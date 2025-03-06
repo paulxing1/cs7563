@@ -1,2 +1,86 @@
-# cs7563
-cs7563
+java cData Science and Statistics Assessment
+
+Length: 2,500 words max (excluding tables, bibliographies, appendices, diagrams, pictures, graphs, and associated captions) – 1,500 words for the 1st and 1000 words for the 2nd part.
+
+This assignment is split in 2 parts. You will be provided with 2 artificial datasets (one for each part) constructed to resemble data taken from electronic health records and a document describing what the contents are and a set of research questions. You are asked to explore, describe and analyse the datasets appropriately. We recommend using either Stata or R.
+
+The actual datasets will be made available partway through the taught component of the module.
+
+PART A
+
+Utilise the exam_data_2024A.dta dataset to develop a model that predicts the presence of diabetes based on various physiological and genetic markers. You will conduct exploratory data analyses, model building, validation and sensitivity analysis to understand the effectiveness and robustness of your model.
+
+The dataset contains the following variables:
+
+patient_id Unique patient identifier pregnancies Number of times pregnant glucose Blood glucose concentration over two hours in an oral glucose tolerance test blood_pressure Diastolic blood pressure (mmHg) skin_thickness Triceps skinfold thickness (mm) insulin Two-hour serum insulin (μU/ml) BMI Body mass index (kg / m2) diabetes_genetic_score Genetic score for diabetes age Age in years diabetes Presence (1) or absence (0) of diabetes
+
+Guidelines on how to write your report (part A)
+
+Your report should include the following elements:
+
+A detailed description of how each variable is treated including measures of central tendency and dispersion, any identification of outliers and any decisions to categorise continuous variables into clinically significant groups. Include a discussion of your modelling decisions made. Justification for any transformation of your predictors (e.g. continuous variables transform into categories if needed) and any creation of new features (interaction terms). Description of model evaluation including the metrics (sensitivity, specificity etc) used to implement internal validation and rationale for choosing them. Description of any sensitivity analyses (e.g., subgroup analyses by age, BMI categories) conducted to assess model robustness. An interpretation of the results and conclusion about the overall study question.
+
+PART B
+
+The 2nd dataset is from a sample of 10K individuals from the Electronic Health Records. We set as baseline the 1st date their Body Mass Index (BMI) was recorded and we also collected information on other characteristics. Individuals were followed up for 5 years and we want to estimate the relationship between smoking cessation (exposure of interest) and the 5-year BMI change (%). In addition, data at baseline is provided on the participant’s sex, age, education, CVD, dementia, diuretics. All individuals were smokers at baseline
+
+The question in the 2nd dataset you are asked to address in your analysis and report is the following: "What is the effect of smoking cessation on BMI change?”
+
+The data will be contained in the file exam_data_2024B.dta on Moodle. The dataset contains the following variables:
+
+Variable Description id ID sex Sex age Age at baseline education level education: values 1 (low) to 5 (high) n_cigarettes N of cigarettes smoking (per day) CVD Prevalent CVD at baseline; No=0, Yes=1 dementia Prevalent dementia at baseline; No=0, Yes=1 diuretics Use of diuretics at baseline; No=0, Yes=1 bmi Body mass index (in kg/m2) - measured at baseline smoking_cessation Quit smoking between baseline and the end of follow-up; No=0, Yes=1 bmi_ch_percent BMI change (%)
+
+Guidelines on how to write your report (part B)
+
+Your report should include the following elements:
+
+1)A descriptive presentation of the dataset 2)Use of an outcome regression model (i.e. a simple linear regression) and estimation of the relationship between smoking cessation and BMI change after 5 years, with and without adjusting for other variables. Interpretation of the results
+
+3)Use of universe probability weighting to adjust for baseline confounders and estimation of the relationship between smoking cessation and BMI change. 4)Use of the g-formula to estimate the BMI change after 5 years in this sample, a) had nobody quitted smoking, b) had all the individuals quitted smoking. What is the average causal effect of smoking cessation on BMI change after 5 years? 5)Comparison of the findings and discussion of the assumptions you need to estimate the average causal effect between smoking cessation and BMI change and the potential bias you may have in this study.
+
+In your report, you do not need to explain the design of the study or provide detail of the data collection methods. You should not need to cite literature regarding the clinical question. You will be assessed on your application of statistical methods and your interpretation of the results. However, you should make sure that the statistical methods that you employ are suitable for the study design, as described in the text above.
+
+We would like you to provide much more detail regarding the statistical methods used than would commonly be provided in a published study report. Do not paste output directly from Stata but transfer results to appropriate text or table formats.
+
+The main text of your report should be at most 2,500 words max (excluding tables, bibliographies, appendices, diagrams, pictures, graphs, and associated captions) – 1,500 words for the 1st and 1000 words for the 2nd part.. An additional six tables or figures (at most) can be presented. Please put these after the main text. Note: these are an upper limit; you do not have to reach these limits. You should be able to get full marks with fewer words and tables/figures.
+
+You can also use GenAI for refining and editing your work, such as to correct grammar/ spelling, suggest synonyms and provide structural edits. GenAI can therefore be used to make improvements to the clarity or quality of your work to improve the final output, but it cannot be used to create new/original content that was not written, at least in draft form, first by you.
+
+You must submit the Stata code used to perform the analyses. The markers must be able to replicate the results presented in your report by re-running the do-file on the provided dataset. While there are no marks directly assigned to the do-file, you will not be able to meet the marking criteria given without one. You may perform the required analyses in a statistical program other than Stata (e.g. R, SPSS, SAS). If you wish to do this, you must submit the equivalent of the Stata do-file appropriate to your chosen software.
+
+Assessment Criteria
+
+Markers will look for the following features in the assignment:
+
+sound understanding of the problems presented in the data;
+
+appropriate selection of techniques to address the research questions; clear presentation of results; appropriate interpretation of the results demonstrating understanding of the strengths and weaknesses of data analysis approaches taken;
+
+style and referencing.
+
+We use the following guide when marking this assessment:
+
+Part A (50%)
+
+A detailed description of how each variable is treated including measures of central tendency and dispersion, any identification of outliers（ and any decisions to categorise continuous variables into clinically significant groups. (10%) Include a discussion of your modelling decisions made. Justification for any transformation of your predictors (e.g. continuous variables transform into categories if needed) and any creation of new features (interaction terms). (10%) Description of model evaluation including the metrics (sensitivity, specificity etc) used to implement internal validation and rationale for choosing them. (10%) Description of any sensitivity analyses (e.g., subgroup analyses by age, BMI categories) conducted to assess model robustness. (10%) An interpretation of the results and conclusion about the overall study question. (10%)
+
+descriptive statistics: how each variable is treated, in terms of minimum values, maximum values, getting confidence with this information, but also it can be correlations between the variables, distributions, including measures of central tendency and dispersion outlier: statistical criteria, make choices which are based on clinical obvious choices or obvious expectations. Make decisions to categorize continuous vulnerable, into clinically significant groups, which can be subdividing the whole distribution ranges, which can be creating different classes, not necessarily on scale, so ordinal or cat代 写program、Java/c++ 代做程序编程语言egorical and categorical. Discuss: when deciding model, I explain why I chose that model for my data, and in which manner I expect that people address the problem, justification or any transformation for the predictors, and any creation of new feature, meaning creation of new variables, which, for example, could exemplify could represent the interaction in between variables which are originally in the database, meaning data enrichment in a way with respect to additional formation. metrics: do checks, but also compare choices and communicate them inside the assessment. specifically used to implement internal validation and rational opportunities. Sensitivity analysis: Happy to go for any of the sensitized possible sensitivity analysis, as far as you justify why each makes sense. Reflect on what’s sensitivity analysis? Results and conclusions: summary 6 main results
+
+Supplementary explanation of the dataset Duplicate Records on Data Modeling Impact of Duplicate Records on Data Modeling • the issue of duplicate records in databases, emphasizing that two patients can have similar information despite having different IDs. • The importance of not deleting information unless there is a compelling reason, such as identical patient IDs, is highlighted. • unless there is a strong reason to delete information, it is reasonable to assume that patients are different. •need to elaborate on the impact of duplicate records on model sensitivity and specificity during training and testing. Effects of Duplicate Records on Model Performance •the potential impact of duplicate records on model performance, including sensitivity and specificity. •the structural impact of duplicate records on the model's features and the concept of singularity in mathematical backgrounds. •the use of Poissonian statistics to handle duplicated records, which involves processing counts of records rather than individual records. • The importance of sensitivity analysis to assess the effect of duplicate records on the model is emphasized. Assessing the Effect of Repetition in the Model •conducting a sensitivity analysis to understand the impact of duplicate records on the model. •assess the effect of repetition inside the model rather than removing patients. •including an appendix in the report to provide additional information and justify the assessment. • The focus is on understanding the path of processing and the importance of step-by-step analysis. Collapsing the Database for Statistical Analysis •collapsing a database to have only one representation of each possible combination of variables. • The method involves considering the count of different records and using statistics on their frequency. •the importance of statistical theory in handling duplicate records. •the need to elaborate on the code leading to the main results and its inclusion in the report. Presentation of Main Results and Relevant Information • the importance of presenting the main results and relevant information in the report. •need to focus on the most important and relevant information rather than completeness. •the distribution of the virus and the importance of presenting graphical images only when necessary. •need to understand the performance of the model and the chosen parameters.
+
+Part B (50%)
+
+A descriptive presentation of the dataset – 10%
+Use of an outcome regression model (i.e. a simple linear regression) and estimation of the relationship between smoking cessation and BMI change after 5 years, with and without adjusting for other variables. Interpretation of the results – 10%
+Use of universe probability weighting to adjust for baseline confounders and estimation of the relationship between smoking cessation and BMI change. – 10%
+Use of the g-formula to estimate the BMI change after 5 years in this sample, a) had nobody quitted smoking, b) had all the individuals quitted smoking. What is the average causal effect of smoking cessation on BMI change after 5 years? – 10%
+Comparison of the findings and discussion of the assumptions you need to estimate the average causal effect between smoking cessation and BMI change and the potential bias you may have in this study. – 10%
+descriptive presentation：clear, descriptive data presentation in a research context tables and figures：need for tables and figures that stand alone and provide comprehensive information, such as standard deviations and percentages for continuous and pedagogical variables, respectively. the necessity of initiating the reader to the descriptive characteristics and ensuring clarity in data presentation. estimate causal effects：use of various methods to estimate causal effects, including outcome regression and G formula, and the importance of presenting three estimates: the effect of treatment, the effect of no treatment, and the causal effect. data coding：gender (0 for women, 1 for men) and educational levels (1-5).
+
+Action items • [] Present a descriptive summary of the dataset, including the characteristics of those who received the exposure versus those who did not. • [] Provide one display item (table or figure) for each of the four analytical approaches discussed (outcome regression, adjustment for baseline confounders, G-formula). • [] For the G-formula approach, estimate and report: 1) what would have happened if everyone had been treated, 2) what would have happened if everyone had been untreated, and 3) the causal effect of the exposure. • [] Discuss and present the assumptions and limitations of the different analytical approaches.
+
+Outline Descriptive Presentation Requirements • Speaker 1 emphasizes the importance of a descriptive presentation that stands alone, even if the reader finds it without context. • The presentation should include tables and figures that clearly explain the data, such as body mass index (BMI) measurements. • Speaker 1 stresses the need for clear and detailed descriptions of variables, such as body mass index in kilograms per meter square. • The presentation should initiate the reader to the descriptive characteristics of the data, especially in the context of bariatric surgery. Clarifying Data Presentation • Speaker 1 advises presenting data in a way that initiates the reader, such as comparing those exposed to a treatment versus those not exposed. • The presentation should include standard deviations and percentages for continuous and pedagogical variables, respectively. • Speaker 1 mentions the importance of presenting data in a clear and stable manner to avoid confusion. • The presentation should clearly state the state of the data, such as body mass index, to ensure understanding. Estimating Causal Effects • Speaker 1 explains the simplicity of using outcome regression to estimate causal effects without confounding variables. • The presentation should include comments on the similarity or difference of findings and which ones to trust. • Speaker 1 mentions the use of various methods to estimate causal effects, such as G formula and adjusting for baseline cofounders. • The presentation should include one display item for each method, with a table presenting results by different methods. Ensuring Comprehensive Presentation • Speaker 1 emphasizes the need to present three estimates: what would have happened if everyone was treated, if everyone was untreated, and the causal effect. • The presentation should include confidence intervals for these estimates and compare the results and assumptions of different models. • Speaker 1 highlights the importance of presenting assumptions in a clear and historical way. • The presentation should follow a flow that makes the content easy to understand, even for those unfamiliar with the concepts. Addressing Data Clarifications • Speaker 1 discusses the need to check the data, such as whether it uses 0 and 1 for gender or a different coding system. • Speaker 3 mentions two different education columns in the data set, one with a numerical range (1 to 5) and another as a floating point. • Speaker 1 suggests that the numerical range (1 to 5) is more likely to be used in the education column. • Speaker 1 asks if there are any other questions and clarifies the need to present data separately among those who quit smoking. Final Remarks and Questions • Speaker 1 reiterates the importance of presenting data in a way that initiates the reader and ensures understanding. • Speaker 1 asks if there are any further questions and hopes the assignment was not too challenging. • Speaker 1 expresses hope that the module was enjoyable and beneficial for the participants. • The meeting concludes with Speaker 1 thanking the participants and wishing them well.
+
+加QQ codinghelp Email: cscholary@gmail.com
+
+
